@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AKCENT ONLINE — ролевой сервер СССР 1987</title>
+  <meta name="description" content="AKCENT ONLINE — ролевой CRMP-сервер в атмосфере СССР 1987 года. Работа, кооперативы, фарца, группировки и милиция.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik+Dirt&family=Inter:wght@400;500;600&family=Marck+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="logo" href="#top" aria-label="AKCENT ONLINE — на главную">
+        <svg class="logo__star" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg>
+        <span>AKCENT ONLINE</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основное меню">
+        <a href="#top" class="nav__link is-active">Главная</a>
+        <a href="#about" class="nav__link">О проекте</a>
+        <a href="#" class="nav__link">Донат</a>
+        <a href="#" class="nav__link">Форум</a>
+        <a href="#" class="nav__link">Правила</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
+      </nav>
+
+      <a href="#play" class="btn btn--red btn--sm header__cta">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-gamepad"/></svg>
+        Начать игру
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Первый экран -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <!-- Нарисованный закат над городом. Если положить картинку в img/hero.jpg, она встанет поверх. -->
+      <svg class="hero__skyline" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMax slice">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#140c12"/>
+            <stop offset=".35" stop-color="#3a1a22"/>
+            <stop offset=".62" stop-color="#9a3a24"/>
+            <stop offset=".78" stop-color="#e0742f"/>
+            <stop offset=".86" stop-color="#f4a24a"/>
+          </linearGradient>
+          <radialGradient id="sun" cx=".66" cy=".68" r=".4">
+            <stop offset="0" stop-color="#ffd18a" stop-opacity=".9"/>
+            <stop offset=".4" stop-color="#f08a3a" stop-opacity=".35"/>
+            <stop offset="1" stop-color="#f08a3a" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#5a2a1e"/>
+            <stop offset="1" stop-color="#0d0a0c"/>
+          </linearGradient>
+          <linearGradient id="glare" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffb867" stop-opacity=".7"/>
+            <stop offset="1" stop-color="#ffb867" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+
+        <rect width="1440" height="820" fill="url(#sky)"/>
+        <rect width="1440" height="820" fill="url(#sun)"/>
+
+        <!-- облака -->
+        <g fill="#1d1016" opacity=".55">
+          <ellipse cx="300" cy="140" rx="320" ry="38"/>
+          <ellipse cx="980" cy="90" rx="420" ry="44"/>
+          <ellipse cx="1280" cy="230" rx="260" ry="26"/>
+          <ellipse cx="620" cy="300" rx="300" ry="20"/>
+        </g>
+
+        <!-- дальний план -->
+        <g fill="#3a1d22">
+          <rect x="0" y="560" width="1440" height="90"/>
+          <rect x="40" y="520" width="70" height="60"/><rect x="130" y="535" width="90" height="45"/>
+          <rect x="250" y="510" width="60" height="70"/><rect x="330" y="540" width="120" height="40"/>
+          <rect x="1180" y="525" width="80" height="55"/><rect x="1300" y="505" width="70" height="75"/>
+          <!-- дальняя высотка слева -->
+          <polygon points="470,580 470,470 485,470 485,430 495,430 495,395 500,360 505,395 505,430 515,430 515,470 530,470 530,580"/>
+        </g>
+
+        <!-- главная высотка -->
+        <g fill="#1f1115">
+          <rect x="820" y="520" width="80" height="130"/>
+          <rect x="1100" y="520" width="80" height="130"/>
+          <rect x="860" y="480" width="40" height="40"/>
+          <rect x="1100" y="480" width="40" height="40"/>
+          <rect x="900" y="420" width="200" height="230"/>
+          <rect x="930" y="340" width="140" height="80"/>
+          <rect x="955" y="270" width="90" height="70"/>
+          <rect x="975" y="215" width="50" height="55"/>
+          <polygon points="985,215 1000,110 1015,215"/>
+          <!-- угловые башенки -->
+          <rect x="905" y="395" width="16" height="25"/><polygon points="905,395 913,372 921,395"/>
+          <rect x="1079" y="395" width="16" height="25"/><polygon points="1079,395 1087,372 1095,395"/>
+          <rect x="934" y="318" width="12" height="22"/><polygon points="934,318 940,300 946,318"/>
+          <rect x="1054" y="318" width="12" height="22"/><polygon points="1054,318 1060,300 1066,318"/>
+        </g>
+        <polygon points="1000,84 1004,96 1017,96 1007,104 1011,117 1000,109 989,117 993,104 983,96 996,96" fill="#e53935"/>
+
+        <!-- окна высотки -->
+        <g fill="#ffbf6b" opacity=".85">
+          <rect x="925" y="440" width="6" height="8"/><rect x="955" y="460" width="6" height="8"/>
+          <rect x="1010" y="450" width="6" height="8"/><rect x="1060" y="470" width="6" height="8"/>
+          <rect x="980" y="370" width="6" height="8"/><rect x="1040" y="390" width="6" height="8"/>
+          <rect x="995" y="290" width="5" height="7"/><rect x="935" y="540" width="6" height="8"/>
+          <rect x="1075" y="560" width="6" height="8"/><rect x="845" y="560" width="6" height="8"/>
+          <rect x="1130" y="590" width="6" height="8"/><rect x="990" y="600" width="6" height="8"/>
+        </g>
+
+        <!-- правая высотка -->
+        <g fill="#26141a">
+          <rect x="1230" y="470" width="110" height="180"/>
+          <rect x="1255" y="400" width="60" height="70"/>
+          <rect x="1272" y="350" width="26" height="50"/>
+          <polygon points="1278,350 1285,290 1292,350"/>
+        </g>
+
+        <!-- ближние панельки слева -->
+        <g fill="#170d11">
+          <rect x="0" y="560" width="150" height="100"/>
+          <rect x="160" y="590" width="190" height="70"/>
+          <rect x="380" y="600" width="140" height="60"/>
+        </g>
+        <g fill="#ffb760" opacity=".7">
+          <rect x="20" y="580" width="8" height="6"/><rect x="60" y="600" width="8" height="6"/>
+          <rect x="100" y="585" width="8" height="6"/><rect x="190" y="610" width="8" height="6"/>
+          <rect x="250" y="620" width="8" height="6"/><rect x="300" y="605" width="8" height="6"/>
+          <rect x="410" y="620" width="8" height="6"/><rect x="470" y="630" width="8" height="6"/>
+        </g>
+
+        <!-- набережная и река -->
+        <rect x="0" y="650" width="1440" height="14" fill="#0f0a0c"/>
+        <rect x="0" y="664" width="1440" height="156" fill="url(#water)"/>
+        <rect x="900" y="664" width="200" height="156" fill="url(#glare)" opacity=".5"/>
+        <g stroke="#ffb867" stroke-opacity=".35" stroke-width="2">
+          <line x1="930" y1="690" x2="1070" y2="690"/><line x1="950" y1="715" x2="1050" y2="715"/>
+          <line x1="970" y1="745" x2="1030" y2="745"/>
+        </g>
+        <!-- фонари -->
+        <g fill="#0b0809">
+          <rect x="140" y="560" width="4" height="100"/><rect x="560" y="580" width="4" height="80"/>
+          <rect x="1380" y="540" width="5" height="120"/>
+        </g>
+        <g fill="#ffcf7a">
+          <circle cx="142" cy="558" r="5"/><circle cx="562" cy="578" r="4"/><circle cx="1382" cy="538" r="6"/>
+        </g>
+      </svg>
+      <img class="hero__photo" src="img/hero.jpg" alt="" onerror="this.remove()">
+      <div class="hero__shade"></div>
+    </div>
+
+    <div class="container hero__content">
+      <h1 class="hero__title">
+        <svg class="hero__star" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg>
+        <span class="hero__brand">AKCENT</span>
+        <span class="hero__brand hero__brand--light">ONLINE</span>
+      </h1>
+
+      <ul class="hero__tags">
+        <li>1987 год</li>
+        <li>Советская эпоха</li>
+        <li>Твоя история</li>
+      </ul>
+
+      <p class="hero__lead">
+        Перестройка только началась: пустые полки, очередь за «Жигулями» на годы,
+        первые кооперативы и свой закон во дворах. Стань рабочим, милиционером,
+        кооператором или пацаном с района — выбор за тобой.
+      </p>
+
+      <div class="hero__actions" id="play">
+        <a href="#" class="btn btn--red">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-play"/></svg>
+          Играть прямо сейчас
+        </a>
+        <a href="#about" class="btn btn--ghost">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-book"/></svg>
+          Узнать больше
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Преимущества -->
+  <section class="features">
+    <div class="container features__grid">
+      <div class="feature">
+        <svg class="feature__icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-users"/></svg>
+        <div>
+          <h3>Живое сообщество</h3>
+          <p>Активные игроки и регулярные ивенты по событиям 1987 года</p>
+        </div>
+      </div>
+      <div class="feature">
+        <svg class="feature__icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shield"/></svg>
+        <div>
+          <h3>Уникальный мир</h3>
+          <p>Город Заречинск: заводы, панельки, частный сектор и колхоз</p>
+        </div>
+      </div>
+      <div class="feature">
+        <svg class="feature__icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-gear"/></svg>
+        <div>
+          <h3>Развитие персонажа</h3>
+          <p>Разряды, стаж, кооперативы, фракции и группировки</p>
+        </div>
+      </div>
+      <div class="feature">
+        <svg class="feature__icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg>
+        <div>
+          <h3>Честная игра</h3>
+          <p>Справедливая администрация и защита от читеров</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- О проекте -->
+  <section class="about" id="about">
+    <div class="container about__grid">
+      <div class="about__text">
+        <span class="eyebrow">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg>
+          О проекте
+        </span>
+        <h2>Атмосфера<br>настоящего СССР</h2>
+        <p>
+          AKCENT ONLINE — это не просто сервер, а целый город 1987 года. Здесь деньги без
+          связей мало что решают: дефицит, очереди и блат — часть игры. Работай на заводе,
+          открой первый кооператив, торгуй джинсами у гостиницы или держи свой район.
+        </p>
+        <a href="#" class="btn btn--red btn--sm">
+          Подробнее о проекте
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+
+      <figure class="about__main card-img">
+        <figcaption class="about__script">Мой родной<br>город…</figcaption>
+      </figure>
+
+      <div class="about__cards">
+        <a href="#" class="tile card-img tile--work">
+          <span>Работа и очередь<br>на автомобиль</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="#" class="tile card-img tile--business">
+          <span>Кооперативы<br>и чёрный рынок</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="#" class="tile card-img tile--factions">
+          <span>Фракции<br>и группировки</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Подвал -->
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <a class="logo" href="#top">
+        <svg class="logo__star" viewBox="0 0 24 24" aria-hidden="true"><use href="#star"/></svg>
+        <span>AKCENT ONLINE</span>
+      </a>
+      <span class="footer__motto">Вместе строим больше</span>
+      <div class="socials">
+        <a href="#" aria-label="ВКонтакте"><svg viewBox="0 0 24 24"><use href="#i-vk"/></svg></a>
+        <a href="#" aria-label="Discord"><svg viewBox="0 0 24 24"><use href="#i-discord"/></svg></a>
+        <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24"><use href="#i-tg"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><use href="#i-yt"/></svg></a>
+      </div>
+      <span class="footer__copy">© 2026 AKCENT ONLINE. Все права защищены.</span>
+    </div>
+  </footer>
+
+  <!-- Иконки -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.5l3.1 6.9 7.4.7-5.6 5 1.6 7.4L12 17.7l-6.5 3.8 1.6-7.4-5.6-5 7.4-.7z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 5h6a2 2 0 012 2v12a2 2 0 00-2-2H4zM20 5h-6a2 2 0 00-2 2v12a2 2 0 012-2h6z"/></symbol>
+    <symbol id="i-gamepad" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 9h12a4 4 0 014 4v1a3 3 0 01-5.2 2L15 14H9l-1.8 2A3 3 0 012 14v-1a4 4 0 014-4zM8 11v4M6 13h4M16 12h.01M18 14h.01"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.3 3-5 6-5s5.4 1.7 6 5"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14c2.3.2 4 1.6 4.5 4.5"/></g></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 3v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10v-6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></g></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><path fill="currentColor" d="M13.6 2l.5 2.6c.7.2 1.3.5 1.9.9l2.4-1.2 2.3 2.3-1.2 2.4c.4.6.7 1.2.9 1.9l2.6.5v3.2l-2.6.5c-.2.7-.5 1.3-.9 1.9l1.2 2.4-2.3 2.3-2.4-1.2c-.6.4-1.2.7-1.9.9l-.5 2.6h-3.2l-.5-2.6c-.7-.2-1.3-.5-1.9-.9l-2.4 1.2-2.3-2.3 1.2-2.4c-.4-.6-.7-1.2-.9-1.9L2 13.6v-3.2l2.6-.5c.2-.7.5-1.3.9-1.9L4.3 5.6l2.3-2.3 2.4 1.2c.6-.4 1.2-.7 1.9-.9L10.4 2zM12 8.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/></symbol>
+    <symbol id="i-vk" viewBox="0 0 24 24"><path fill="currentColor" d="M12.8 18c-6.2 0-9.7-4.2-9.8-11.2h3.1c.1 5.1 2.4 7.3 4.1 7.7V6.8h2.9v4.4c1.8-.2 3.6-2.2 4.2-4.4h2.9c-.5 2.7-2.4 4.7-3.8 5.5 1.4.7 3.6 2.4 4.4 5.7h-3.2c-.7-2.2-2.4-3.9-4.5-4.1V18z"/></symbol>
+    <symbol id="i-discord" viewBox="0 0 24 24"><path fill="currentColor" d="M19.3 5.3A16.5 16.5 0 0015.2 4l-.5 1a15 15 0 00-5.4 0l-.5-1a16.5 16.5 0 00-4.1 1.3C2.1 9.2 1.4 13 1.7 16.7a16.6 16.6 0 005 2.5l1.1-1.7a10.7 10.7 0 01-1.7-.8l.4-.3a11.8 11.8 0 0011 0l.4.3-1.7.8 1.1 1.7a16.6 16.6 0 005-2.5c.4-4.3-.7-8.1-3-11.4zM8.7 14.4c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/></symbol>
+    <symbol id="i-tg" viewBox="0 0 24 24"><path fill="currentColor" d="M21.5 4.2L2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.8c.3-1.3-.5-1.9-1.5-1.3zM9.3 14.1l9.3-5.9-7.6 7-.3 3.2z"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M22.5 7.2a2.8 2.8 0 00-2-2C18.8 4.8 12 4.8 12 4.8s-6.8 0-8.5.4a2.8 2.8 0 00-2 2A29 29 0 001.1 12a29 29 0 00.4 4.8 2.8 2.8 0 002 2c1.7.4 8.5.4 8.5.4s6.8 0 8.5-.4a2.8 2.8 0 002-2 29 29 0 00.4-4.8 29 29 0 00-.4-4.8zM9.8 15.1V8.9l5.6 3.1z"/></symbol>
+  </svg>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav');
+    burger.addEventListener('click', () => {
+      const open = nav.classList.toggle('is-open');
+      burger.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', open);
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('is-open');
+      burger.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', false);
+    }));
+  </script>
+</body>
+</html>
