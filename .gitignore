@@ -1,0 +1,55 @@
+# Visual Studio / Rider
+.vs/
+.vscode/
+.idea/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+*.xcodeproj
+*.xcworkspace
+
+# Compiled files
+*.slo
+*.lo
+*.o
+*.obj
+*.pch
+*.dll
+*.dylib
+*.so
+*.lai
+*.la
+*.a
+*.lib
+*.exe
+*.out
+*.app
+*.ipa
+*.pdb
+*.ilk
+*.exp
+
+# Unreal Engine generated folders
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Build/*
+!Build/**/*.ico
+.vsconfig
+
+# Plugin build output
+Plugins/**/Binaries/
+Plugins/**/Intermediate/
+
+# Packaged builds
+Releases/
+Packaged/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
